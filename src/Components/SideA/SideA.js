@@ -1,20 +1,21 @@
+/** */
+/* Creacion del componente SideA
+ * para la parte de lado izquierdo (Menu lateral)
+ * Al final se agrego una Grafica con información 
+ * Aleatoria pero se quito por que no era necesaria
+/** */
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import Option from './Option/Option'
-import Charts from '../Charts/Charts'
+import { connect } from 'react-redux'
 import './SideA.css'
 
 export class SideA extends Component {
     render() {
         return (
             <section className="sidea">
-                {/* <nav>
-                    <Option name="Search"/>           
-                    <Option name="Home"/>           
-                    <Option name="Playlist"/>           
-                    <Option name="Library"/>           
-                </nav> */}
-                <Charts></Charts>
+                <Option name="Search"></Option>
+                <Option name="Home"></Option>
+                <Option name="Library"></Option>
             </section>
         )
     }

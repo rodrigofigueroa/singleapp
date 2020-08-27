@@ -1,10 +1,16 @@
+/**
+ * Buscador se utilizo GraphQl para las peticiones
+ * Material Ui para el buscador estado de Hook y UseEffect
+ */
 import React, { useState } from 'react'
 import Input from '@material-ui/core/Input'
 import Button from '@material-ui/core/Button'
 import './PrimeraParte.css'
 import { gql, useQuery } from '@apollo/client'
 
-const PrimeraParte = props => {   
+const PrimeraParte = props => {  
+    //Se utilizo un Hook para poder agregar una variable dinamica a la
+    // peticion 
         const [keyVal, setKeyVal ] = useState(null)
         const getArtist = gql`
             {
@@ -16,7 +22,8 @@ const PrimeraParte = props => {
         }
         `
     const { data } = useQuery(getArtist)
-
+        //Se agrego un settimeOut por el momento para manejar la peticion
+        // y por props se ejecuta la funcion CreateCard con la información de la peticion
     const searchArtist = e => {
         e.preventDefault()
         setTimeout(() => {

@@ -1,5 +1,5 @@
 .sidea{
-    width: 30%;
+    width: 20%;
     background: #000;
     height: auto;
     padding: 20px 0;
@@ -10,4 +10,5 @@ nav{
     padding: 20px 0px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }

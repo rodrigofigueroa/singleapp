@@ -1,15 +1,16 @@
+/**
+ * Creacion de una Card dinamica 
+ */
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import './Segunda.sass'
 
 const Segunda = props =>  {
+    //state desde redux
         const { state } = props
-        let [artist, setArtist ] = useState(null)
-        useEffect( () => {
-            console.log(state)
-                setArtist(state)
-        },[state])
+        
         return (
+            //Card dinamica con la peticion de GraphQl
             <div className="container_card">
                 {
                     state !== undefined

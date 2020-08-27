@@ -1,3 +1,7 @@
+/*******/
+/* Index.js donde se importan el app y se injecta 
+/* a el tag root
+/*******/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from  'react-redux'
@@ -7,10 +11,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
+// creando el cliente de apollo para GRaphQl
 const client = new ApolloClient({
     uri: 'https://spotify-graphql-server.herokuapp.com/graphql',
     cache: new InMemoryCache()
 })
+//Añadiendo Provider Redux, Provider Apollo a la App
 ReactDOM.render(
   <Provider store={store}>
     <ApolloProvider client={client}>

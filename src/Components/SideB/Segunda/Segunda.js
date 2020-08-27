@@ -1,7 +1,7 @@
 /**
  * Creacion de una Card dinamica 
  */
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import './Segunda.sass'
 

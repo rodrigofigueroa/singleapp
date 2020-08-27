@@ -1,7 +1,8 @@
 .sidea{
     width: 20%;
     background: #000;
-    height: auto;
+    height: 100vh;
+    overflow: auto;
     padding: 20px 0;
 }
 

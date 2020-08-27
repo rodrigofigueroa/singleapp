@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import Input from '@material-ui/core/Input'
+import Button from '@material-ui/core/Button'
 import './PrimeraParte.css'
 import { gql, useQuery } from '@apollo/client'
-
-
 
 const PrimeraParte = props => {   
         const [keyVal, setKeyVal ] = useState(null)
@@ -16,20 +15,26 @@ const PrimeraParte = props => {
             }
         }
         `
-    const { loading, error, data} = useQuery(getArtist)
+    const { data } = useQuery(getArtist)
 
     const searchArtist = e => {
+        e.preventDefault()
+        setTimeout(() => {
+            props.CreateCard(data)
+        },2000)
+    }
+
+    const handleOnchange = e => {
         let value = e.target.value
         setKeyVal(value)
-        if( value.length >= 3){
-            props.CreateCard(data)
-        }
     }
     
     return (
         <section className="primeraParte">
-            <Input style={{color : '#fff'}} placeholder="Coldplay" 
-                onChange={searchArtist} ></Input>
+            <form onSubmit={searchArtist }>
+                <Input style={{color : '#fff'}} onChange={handleOnchange} placeholder="Coldplay" ></Input>
+                <Button onClick={searchArtist } variant="contained" color="primary">Buscar</Button>
+            </form>
             {keyVal}
         </section>
     )

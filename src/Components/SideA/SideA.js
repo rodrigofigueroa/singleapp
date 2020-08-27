@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Option from './Option/Option'
+import Charts from '../Charts/Charts'
 import './SideA.css'
 
 export class SideA extends Component {
     render() {
         return (
             <section className="sidea">
-                <nav>
+                {/* <nav>
                     <Option name="Search"/>           
                     <Option name="Home"/>           
                     <Option name="Playlist"/>           
                     <Option name="Library"/>           
-                </nav>
+                </nav> */}
+                <Charts></Charts>
             </section>
         )
     }

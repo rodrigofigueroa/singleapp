@@ -1,7 +1,6 @@
 import { ARTIST } from '../Actions/Artista'
 
-export const reducerSpoty = ( state, action ) => {
-    
+export const reducerSpoty = ( state, action ) => {    
     switch( action.type ){
         case ARTIST: 
         return{

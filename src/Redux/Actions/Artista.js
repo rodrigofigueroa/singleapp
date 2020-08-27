@@ -1,5 +1,3 @@
 export const ARTIST = "spotify"
 
-export const objectCreator = value => ({ 
-        type: ARTIST, value  
-    })
+export const objectCreator = value => ({ type: ARTIST, value  })

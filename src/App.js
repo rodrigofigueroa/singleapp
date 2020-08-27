@@ -1,7 +1,7 @@
 import React from 'react';
 import SideA from './Components/SideA/SideA'
 import SideB from './Components/SideB/SideB'
-import './App.css';
+import './App.sass';
 
 function App() {
   return (
